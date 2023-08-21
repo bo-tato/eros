@@ -153,7 +153,7 @@ the overlay."
         (let* ((beg (if (consp where)
                         (car where)
                       (save-excursion
-                        (backward-sexp 1)
+                        (ignore-errors (backward-sexp 1))
                         (point))))
                (end (if (consp where)
                         (cdr where)
